@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 2-square
+Module 4-square
 Defines a class Square with private instance atribute,
 public instance method, and can access and update size
 """
