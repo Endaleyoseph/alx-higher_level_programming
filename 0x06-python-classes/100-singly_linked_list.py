@@ -133,7 +133,7 @@ class SinglyLinkedList:
         while (tmp.next_node is not None) and (new.data > tmp.data):
             prev = tmp
             tmp = tmp.next_node
-        if new.data <= tmp.data:
+        if new.data < tmp.data:
             prev.next_node = new
             new.next_node = tmp
             return
