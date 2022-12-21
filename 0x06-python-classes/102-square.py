@@ -79,6 +79,7 @@ class Square:
         compares and returns if lesser than
         """
         return self.size < other.size
+
     def __le__(self, other):
         """
         compare nad returns if less or equal
