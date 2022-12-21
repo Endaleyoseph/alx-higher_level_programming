@@ -3,6 +3,7 @@
 Module 103-magic_class
 Defines class MagicClass
 """
+import math
 
 
 class MagicClass:
@@ -19,8 +20,7 @@ class MagicClass:
         """
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
-        else:
-            self.__radius = radius
+        self.__radius = radius
 
     def area(self):
         """
