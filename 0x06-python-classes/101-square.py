@@ -116,8 +116,9 @@ class Square:
         if self.__size == 0:
             return string
 
-        string += "\n" * self.position[1]
-        string += "\n".join([" " * self.__position[0] +
-                             "#" * self.__size
-                             for tows in range(self.__self)])
+        string += "\n" * self.__position[1]
+        for i in range(self.__size):
+            string += (" " * self.__position[0]) + ("#" * self.__size)
+            if i != self.__size - 1:
+                string += "\n"
         return string
