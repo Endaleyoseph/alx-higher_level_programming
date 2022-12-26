@@ -1,0 +1,36 @@
+This is a test case for 3-say_my_name
+=====================================
+
+Import the module
+
+       >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Success cases:
+
+       >>> say_my_name("Tom", "Cruse")
+       My name is Tom Cruse
+       >>> say_my_name("James", "Corden")
+       My name is James Corden
+       >>> say_my_name("123")
+       My name is 123 
+
+Fail cases:
+
+       >>> try:
+       ...  say_my_name(123, "st")
+       ... except Exception as e:
+       ...  print(e)
+       ...
+       first_name must be a string
+       >>> try:
+       ...  say_my_name(None)
+       ... except Exception as e:
+       ...  print(e)
+       ...
+       first_name must be a string
+       >>> try:
+       ...  say_my_name("Harry", None)
+       ... except Exception as e:
+       ...  print(e)
+       ...
+       last_name must be a string
