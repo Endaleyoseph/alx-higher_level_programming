@@ -25,7 +25,7 @@ def read_stdin_compute():
                    "403": 0, "404": 0, "405": 0, "500": 0}
     try:
         for line in sys.stdin:
-            list_t = line.strip().split(" ")
+            list_t = list(map(str, line.strip().split(" ")))
             size += int(list_t[-1])
             if list_t[-2] in status_code.keys():
                 status_code[list_t[-2]] += 1
