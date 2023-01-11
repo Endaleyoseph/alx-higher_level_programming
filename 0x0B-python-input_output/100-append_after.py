@@ -8,18 +8,11 @@ searchs for a string and adds a text
 
 def append_after(filename="", search_string="", new_string=""):
     """Inserts a line in a text file"""
-    content = []
-    with open(filename, mode="r") as f:
+    with open(filename, mode="r+") as f:
+        text = ""
         for line in f:
-            content.append(line)
-
-    for i in range(len(content)):
-        if search_string in content[i]:
-            if i == len(content) - 1:
-                content.append(new_string)
-            else:
-                content.insert(i + 1, new_string)
-
-    with open(filename, mode="w") as f:
-        for line in content:
-            f.write(line)
+            text += line
+            if search_string in line:
+                text += new_string
+        f.seek(0)
+        f.write(text)
