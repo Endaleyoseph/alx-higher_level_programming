@@ -26,7 +26,7 @@ def read_stdin_compute():
     try:
         for line in sys.stdin:
             list_t = line.strip().split(" ")
-            size = int(list_t[-1])
+            size += int(list_t[-1])
             if list_t[-2] in status_code.keys():
                 status_code[list_t[-2]] += 1
             lines += 1
