@@ -12,6 +12,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, mode="r") as f:
         for line in f:
             content.append(line)
+        f.seek(0)
 
     for i in range(len(content)):
         if search_string in content[i]:
